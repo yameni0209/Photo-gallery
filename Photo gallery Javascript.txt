@@ -1,0 +1,78 @@
+// Define the photos data
+const photos = [
+{
+id: 1,
+category: 'landscape',
+src: 'https://picsum.photos/200/150?random=1'
+},
+{
+id: 2,
+category: 'portrait',
+src: 'https://picsum.photos/200/150?random=2'
+},
+{
+id: 3,
+category: 'still-life',
+src: 'https://picsum.photos/200/150?random=3'
+},
+{
+id: 4,
+category: 'landscape',
+src: 'https://picsum.photos/200/150?random=4'
+},
+{
+id: 5,
+category: 'portrait',
+src: 'https://picsum.photos/200/150?random=5'
+},
+// Add more photos here...
+];
+
+// Create the gallery container element
+const galleryContainer = document.createElement('div');
+galleryContainer.classList.add('gallery-container');
+document.body.appendChild(galleryContainer);
+
+// Function to generate the photos
+function generatePhotos(photos) {
+photos.forEach((photo) => {
+const photoElement = document.createElement('div');
+photoElement.classList.add('photo');
+photoElement.innerHTML = `
+<img src="${photo.src}" alt="${photo.category}">
+`;
+galleryContainer.appendChild(photoElement);
+});
+}
+
+// Function to filter the photos
+function filterPhotos(category) {
+const photosElements = document.querySelectorAll('.photo');
+photosElements.forEach((photoElement) => {
+const photoCategory = photoElement.querySelector('img').alt;
+if (category === 'all' || photoCategory === category) {
+photoElement.style.display = 'block';
+} else {
+photoElement.style.display = 'none';
+}
+});
+}
+
+// Generate the photos initially
+generatePhotos(photos);
+
+// Create the filter buttons
+const filterButtonsContainer = document.createElement('div');
+filterButtonsContainer.classList.add('filter-container');
+document.body.appendChild(filterButtonsContainer);
+
+const categories = ['all', 'landscape', 'portrait', 'still-life'];
+categories.forEach((category) => {
+const button = document.createElement('button');
+button.classList.add('filter-btn');
+button.textContent = category;
+button.addEventListener('click', () => {
+filterPhotos(category);
+});
+filterButtonsContainer.appendChild(button);
+});
