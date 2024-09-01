@@ -1,0 +1,29 @@
+User Document: Online Photo Gallery
+
+Introduction
+
+Welcome to the Online Photo Gallery! This web application allows you to view and filter photos based on categories. This document will guide you through the features and functionality of the application.
+
+Getting Started
+
+Open a web browser (e.g., Google Chrome, Mozilla Firefox, Safari, Microsoft Edge) and navigate to the Online Photo Gallery website.
+The application will load and display a grid of photos with captions and categories.
+Viewing Photos
+
+To view a larger version of a photo, click on the photo thumbnail.
+The photo will be displayed in a modal window with a caption and category information.
+To close the modal window, click on the "X" icon in the top-right corner or press the "Esc" key.
+Filtering Photos
+
+To filter photos by category, click on one of the category filters (e.g., "Landscape", "Portrait", "Wildlife") in the top navigation bar.
+The photo grid will update to display only photos that match the selected category.
+To clear the filter and display all photos, click on the "All" category filter.
+Navigation
+
+The top navigation bar contains the following links:"All": Displays all photos.
+"Categories": Displays a list of available categories.
+"About": Displays information about the application.
+The footer contains a link to the application's GitHub repository.
+Troubleshooting
+
+If the application is not loading or displaying photos, try refreshing the page or checking your internet connection.
